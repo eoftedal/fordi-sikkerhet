@@ -17,205 +17,28 @@
     </style>
   </head>
   <body>
-    <textarea id="source">
 
-# Brukernavn og passord
+<textarea id="source">
 
-### BEVIS AT DU ER DU
-
-## 
-ID
-En delt hemmelighet (passord)
-
-### Hvorfor er du irritert: 
-- Du glemmer passordet
-- Den andre sprer passordet
-- Noen klarer å gjette passordet 
-- Passordet må være veldig langt og har kronglete regler
-- Passordet må skiftes ofte
-
-### Hva er greia?
-Et offentlig navn, og en delt hemmelighet
-
-### Funker det?
-For ting som ikke krever veldig mye sikkerhet
-
-### Terningkast: 
-4 - Billig og brukbart, men rimelig lett å misbruke.
+# Velkommen 
 
 ---
 
-# Fingeravtrykksleser
-
-### Problem: BEVIS AT DU ER DU
-
-### Hva er greia
-* Bruker en sensor for ta bilde av fingeren som da lager et superlang nøkkel som er unik for din finger
-* Umulig å glemme, vanskelig å miste
-
-### Terningkast
-2 - Funker ikke alltid og krever masse dyr teknologi
-
---
-
-### Hvorfor er du irritert
-* Det for det meste...
-* Må prøve 9 ganger for at det skal gå gjennom
-* Folk kutter av fingeren din og slikt
-
----
-
-# BankID - applet
-
-### Problem: Sikker kommunikasjon
-
---
-
-* Ekstra sikker kommunikasjon (Applet -> Server) 
-* En delt gjenbrukt hemmelighet (passord)
-* En engangshemmelighet (dongle/sms/etc)
-
---
-
-### Hvorfor er du irritert: 
-- Java-Applet er noe dritt og funker ikke på X
-- Jeg glemmer BankID-dongelen
-
---
-
-### Funker det?
-Teknisk sett - Men nå er 2014 og ikke 2004. Det kan gjøres bedre.
-
----
-
-# BankId - Dongle
-
-- Engangspassord må leveres på en eller annen måte
-- Papir, sms, egen app, eller DONGLE
-- Enda en dings du må ha med deg og som du mister
-- Dyrt
-
----
-
-# BankId - Java applet
-
-## Sikker kommunikasjon
-
-- Java må installeres overalt og deretter oppdateres over alt
-- Blir egentlig ikke brukt så mye lengre
-- Har en del sikkerhetshull som oppdateres
-- Klønete oppdateringsmekanisme
-- Om java ikke oppdateres har du sikkerhetshull 
-
-### Funker det?
-Ja
-
-## Er det nødvendig?
-Ikke nå lengre
-
-
----
-
-# Citrix
-
-## Lat som du er på kontoret selv om du sitter hjemme
-
-
---- 
-
-
----
-
-# VPN
-
-## Lat som du er på kontoret selv om du sitter hjemme
-
-
----
-
-# DigiPost
-
-## Sikker kommunikasjon og oppbevaring
-
-
----
-
-# SSL (hengelåsen)
-
-## Sikker kommunikasjon
-
----
-
-# Captcha
-
-## Jeg tror du er en robot
-
-
-
---- 
-
-# Antivirus
-
-### Datamaskina di kan bli kontrollert av andre
-
-
----
-
-# Brannmur
-
----
-
-# DRM
-
-###  
-
----
-
-# Spam-filter
-
-
----
-
-# Skriv inn passord
-
-
----
-
-# AAAAAArgh, hvorfor får jeg ikke installert inn Spotify
-
-# Admin-tilgang og slikt
-
-
----
-
-# Du må oppdatere X
-
-### Software inneholder feil
-Og derfor må det opps
-
-###
-
----
-
-# Du har blitt logget ut fra www.nettbank-og-webmailen-din.com
-
-### Hva er greia?
-* Misbruk om du sitter på nettkafe eller på "offentlig" pc
-* Minsker konsekvensen for sesjons-stjeling
-* 
-
----
-
-# Du har blitt logget ut fra pcen din
-
-### Hva er greia?
-
-
-    </textarea>
+</textarea>
+
+<div id="after"></div>
+    <script src="http://cdn.jsdelivr.net/lodash/2.4.1/lodash.min.js"></script>
+    <script src="rants.js" type="text/javascript"></script>
+    <script src="generator.js" type="text/javascript"></script>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
     </script>
     <script type="text/javascript">
+      leggTilGreier();
+
+      console.log("ferdig", document.getElementById("source"))
+      
       var slideshow = remark.create();
+      
     </script>
   </body>
 </html>
