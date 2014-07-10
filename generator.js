@@ -4,16 +4,17 @@ var leggTilGreier = function(){
 	var slide = "\n\n---\n\n";
 
 	var templates = {
-		"greia" : "# {{value}}"+ subslide,
-		"navn" : "### {{value}}"+ subslide,
-		"funker": "### {{value}}"+ subslide,
+		"rant" : "##Rant: {{value}}"+ subslide,
+		"navn" : "##Løsning: {{value}}"+ subslide,
+		"funker": "###Funker det? \n\n{{value}}"+ subslide,
 		"problemer": "{{value}}"+ subslide,
-		"terningkast" : "### Terningkast: {{value}}"+ subslide,
+		"terningkast" : "### Terningkast: {{value}}",
+		
 		"_array" : "* {{value}}\n",
-		"_main": "{{greia}}"+
-					"{{navn}}"+
-					"{{funker}}"+
+		"_main": "{{rant}}"+
+					"{{navn}}"+				
 					"{{problemer}}"+
+					"{{funker}}"+
 					"{{terningkast}}"+
 					"\n\n---\n\n"
 
@@ -48,8 +49,7 @@ var leggTilGreier = function(){
 
 				if(typeof value === "object"){
 
-					for(idx in value){	
-						console.log(value.length)				
+					for(idx in value){		
 						var arrayValue = value[idx];
 						text_til_denne_ranten += replace('_array', arrayValue);						
 					}		
@@ -59,7 +59,6 @@ var leggTilGreier = function(){
 				}
 			
 				var replacedText = replace(prop, text_til_denne_ranten);
-				console.log(replacedText)
 				rantResult = rantResult.replace('{{'+prop+'}}', replacedText ? replacedText : "");
 
 			}
