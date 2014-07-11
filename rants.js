@@ -1,62 +1,55 @@
-/*
-{ 
-	navn: "",
-	rant: "", 
-	losning: "",
-	problemer: [""],
-	funker: "",
-	terningkast: 0
-},
-
-*/
-
 var rants = [
 { 
 	navn: "Brukernavn og passord",
-	rant: "Jeg husker ikke passordet mitt", 
+	rant: "Jeg husker ikke passordet mitt",
+	problem: "Hvem er du?",
 	losning: "En navnelapp og en delt hemmelighet",
-	problemer: ["Passordet må være langt for å være bra", "Dårlige passord kan hackes relativt enkelt", "Passordgjenbruk - og lekkasjer"],
+	issues: ["Passordet må være langt for å være bra", "Dårlige passord kan hackes relativt enkelt", "Passordgjenbruk - og lekkasjer"],
 	funker: "Så lenge du ikke trenger veldig mye sikkerhet",
 	terningkast: 2
 },
 { 
 	navn: "Fingeravtrykksleser",
+	problem: "Hvem er du?",
 	rant: "Jeg gidder ikke huske enda et passord", 
 	losning: "La oss bruke fingeren din, den mister du sikkert ikke!!", 
-	problemer: ["Det for det meste...", "Må prøve 9 ganger for at det skal gå gjennom", "Folk kutter av fingeren din og slikt"],
+	issues: ["Det for det meste...", "Må prøve 9 ganger for at det skal gå gjennom", "Folk kutter av fingeren din og slikt"],
 	funker: "Tja",
 	terningkast: 2
 },
 { 
 	navn: "2 - faktor autentisering",
+	problem: "Hvem er du? Serriøst",
 	rant: "Når brukernavn og passord ikke er nok", 
 	losning: "Brukernavn, passord + en delt hemmelighet som blir brukt bare en gang",
-	problemer: ["Jeg glemmer dingsen", "Dingser koster penger", "Krever bokføring hos sender og mottaker", "Dyrt", "Krever en del infrastruktur"],
+	issues: ["Jeg glemmer dingsen", "Dingser koster penger", "Krever bokføring hos sender og mottaker", "Dyrt", "Krever en del infrastruktur"],
 	funker: "Veldig bra så lenge du husker dingsen",
 	terningkast: 4
 },
 { 
-	navn: "BankID java-applet",
+	navn: "BankID Java-applet",
+	problem: "Vennligst signer her"
 	rant: "Føkkings JAVA", 
 	losning: "Vi lager en JAVA-applet som kjører på alle browsere.",
-	problemer: ["Java må installeres overalt", "Java må være oppdatert overalt!", "Java er en plugin", "Det funker ikke"],
+	issues: ["Java som en browser plugin", "Java som en browser plugin", "Java som en browser plugin", "Java som en browser plugin"],
 	funker: "Teknisk sett - Men nå er 2014 og ikke 2004. Det kan gjøres bedre.",
-	alternativer: "SSL/TLS",
-	terningkast: 3
+	alternativer: "BankID-mobil eller en løsning basert på JavaScript",
+	terningkast: 1
 },
 { 
 	navn: "SSL/TLS",
-	rant: "Vi må kunne sende meldinger uten at noen kan lese eller forandre meldingene", 
-	losning: "KRYPTO-magi hvor man utveksler sertifikater og verifiserer disse hos en 3. part",
-	problemer: ["Må bygges inn i alle browsere", "3. parter blir nøkkelen"],
+	problem: "Vi må kunne sende meldinger uten at noen kan lese eller forandre meldingene",
+	rant: "?",
+	losning: "KRYPTO-magi som involverer sertifikater, pålitelige 3.parter og masse røverspråk",
+	issues: ["Må bygges inn i alle browsere", "Krever solide 3.parter"],
 	funker: "JA",
-	terningkast: 5
+	terningkast: 6
 },
 { 
 	navn: "BankId - Dongle",
 	rant: "AAAAAArgh, jeg må inn i nettbanken for å overføre penger, og har glemt BankID-greia mi", 
 	losning: "2-faktor autentisering hvor donglen genererer engangspassord",
-	problemer: ["Ganske kostbar", "Veldig glembar", "Enda en dings"],
+	issues: ["Ganske kostbar", "Veldig glembar", "Enda en dings"],
 	funker: "Jepp",
 	alternativer: ['Lapp med koder', 'App', "SMS"],
 	terningkast: 4
@@ -65,7 +58,7 @@ var rants = [
 	navn: "Citrixn / Virtuell desktop",
 	rant: "Jeg må logge på Citrix på jobben og det er ganske mye pain å jobbe inni der", 
 	losning: "Virtuell desktop",
-	problemer: ["Sårbart for nettverk", "IT-avdelinger liker å låse ned ting"],
+	issues: ["Sårbart for nettverk", "IT-avdelinger liker å låse ned ting"],
 	funker: "",
 	terningkast: 2
 },
@@ -73,7 +66,7 @@ var rants = [
 	navn: "VPN",
 	rant: "Jeg får ikke tilgang til $common når jeg sitter hjemme", 
 	losning: "SSL på nettverksnivå",
-	problemer: [""],
+	issues: [""],
 	funker: "",
 	terningkast: 5
 },
@@ -82,7 +75,7 @@ var rants = [
 	rant: "Ååå, jeg har ikke lyst på enda en digital postkasse. Jeg har jo epost", 
 	problem: "Epost er usikkert og kan sniffes",
 	losning: "En stor silo som tilbyr sending, lesing og mottak",
-	problemer: ["Enkeltleverandør", "Støtter ikke eksisterende systemer (epost)"],
+	issues: ["Enkeltleverandør", "Støtter ikke eksisterende systemer (epost)"],
 	funker: "Ja, men er avhengig av kritisk masse",
 	terningkast: 6
 },
@@ -91,25 +84,58 @@ var rants = [
 	rant: "Jeg klarer ikke logge in på LinkedIn fordi de har en ubrukelig Captcha", 
 	problem: "",
 	losning: "",
-	problemer: [""],
+	issues: [""],
 	funker: "",
 	terningkast: 2
 },
-
+{
+	navn: "Antivirus",
+	rant: "Datan min er blir så syyyykt treg pga antivirus",
+	problem: "Eneklte dataprogrammer gjør ting du ikke vil de skal gjøre"
+	losning: "Et dataprogram som overvåker alt som skjer på maskina",
+	issues: ["Krever en god del ressurser", "Vanskelig å kjenne igjen virus-aktig aktivitet"],
+	alternativer:
+	funker: "",
+	terningkast: 3
+},
+{
+	navn: "SSO og lågg deg inn med facebook",
+	rant: "",
+	losning: "",
+	issues: [""],
+	funker: "",
+	terningkast: 0
+},{
+  	navn: "Bankid på mobil ",
+  	rant: "Mista telefonen",
+  	losning: "",
+  	issues: [""],
+  	funker: "",
+  	terningkast: 0
+  },
+  {
+  	navn: "WiFi",
+  	rant: "Det helsikes wifi-passordet er så sykt vanskelig", 
+  	losning: "",
+  	issues: [""],
+  	funker: "",
+  	terningkast: 0
+  },
 ];
 
 /*
+{ 
+	navn: "",
+	rant: "", 
+	losning: "",
+	issues: [""],
+	funker: "",
+	terningkast: 0
+},
 
+*/
 
----
-
-# Captcha
-
-## Jeg tror du er en robot
-
-
-
---- 
+/*
 
 # Antivirus
 

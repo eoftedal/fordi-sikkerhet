@@ -13,7 +13,7 @@ var leggTilGreier = function(){
 		"_array" : "* {{value}}\n",
 		"_main": "{{rant}}"+
 					"{{navn}}"+				
-					"{{problemer}}"+
+					"{{issues}}"+
 					"{{funker}}"+
 					"{{terningkast}}"+
 					"\n\n---\n\n"
@@ -62,12 +62,8 @@ var leggTilGreier = function(){
 				rantResult = rantResult.replace('{{'+prop+'}}', replacedText ? replacedText : "");
 
 			}
-
-			//console.log(rant, rantResult, result);
 			result += rantResult;
-			
-
-		});	
+		});
 
 		return result;	
 	}
@@ -79,16 +75,5 @@ var leggTilGreier = function(){
 
   var newDiv = document.getElementById("source");
   var newContent = document.createTextNode(outer); 
-  newDiv.appendChild(newContent); //add the text node to the newly created div. 
+  newDiv.appendChild(newContent);
 };
-
-/*
----
-
-
-
----
-
-
----
-*/
