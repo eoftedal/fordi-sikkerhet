@@ -8,7 +8,7 @@ var leggTilGreier = function(){
 		"navn" : "##Løsning: {{value}}"+ subslide,
 		"funker": "###Funker det? \n\n{{value}}"+ subslide,
 		"problemer": "{{value}}"+ subslide,
-		"terningkast" : "### Terningkast: {{value}}",
+		"terningkast" : "### Terningkast:\n\n![Alt text](dice-{{value}}.png)",
 		
 		"_array" : "* {{value}}\n",
 		"_main": "{{rant}}"+

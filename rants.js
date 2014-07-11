@@ -67,7 +67,7 @@ var rants = [
 	losning: "Virtuell desktop",
 	problemer: ["Sårbart for nettverk", "IT-avdelinger liker å låse ned ting"],
 	funker: "",
-	terningkast: 0
+	terningkast: 2
 },
 { 
 	navn: "VPN",
@@ -80,20 +80,20 @@ var rants = [
 { 
 	navn: "DigPost",
 	rant: "Ååå, jeg har ikke lyst på enda en digital postkasse. Jeg har jo epost", 
-	problem: "Epost er usikkert og kan sniffes"
+	problem: "Epost er usikkert og kan sniffes",
 	losning: "En stor silo som tilbyr sending, lesing og mottak",
 	problemer: ["Enkeltleverandør", "Støtter ikke eksisterende systemer (epost)"],
 	funker: "Ja, men er avhengig av kritisk masse",
-	terningkast: "Tør ikke"
+	terningkast: 6
 },
 { 
 	navn: "Captcha",
 	rant: "Jeg klarer ikke logge in på LinkedIn fordi de har en ubrukelig Captcha", 
-	problem: 
+	problem: "",
 	losning: "",
 	problemer: [""],
 	funker: "",
-	terningkast: 0
+	terningkast: 2
 },
 
 ];
