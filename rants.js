@@ -9,13 +9,13 @@ var rants = [
 	terningkast: 2
 },
 { 
-	navn: "Fingeravtrykksleser",
+	navn: "Fingeravtrykksleser - WTF",
 	problem: "Hvem er du?",
 	rant: "Jeg gidder ikke huske enda et passord", 
 	losning: "La oss bruke fingeren din, den mister du sikkert ikke!!", 
 	issues: ["Det for det meste...", "Må prøve 9 ganger for at det skal gå gjennom", "Folk kutter av fingeren din og slikt"],
 	funker: "Tja",
-	terningkast: 2
+	terningkast: 3
 },
 { 
 	navn: "2 - faktor autentisering",
@@ -82,9 +82,9 @@ var rants = [
 { 
 	navn: "Captcha",
 	rant: "Jeg klarer ikke logge in på LinkedIn fordi de har en ubrukelig Captcha", 
-	problem: "",
-	losning: "",
-	issues: [""],
+	problem: "Jeg tror du er en datamaskin  ",
+	losning: "Mennesker er sykt bra på å gjenkjenne mønster, så vi bruker et bilde",
+	issues: ["Datamaskiner blir kjappere og kjappere"],
 	funker: "",
 	terningkast: 2
 },
