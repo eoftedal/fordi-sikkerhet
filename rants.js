@@ -4,15 +4,15 @@ var rants = [
 	rant: "Jeg husker ikke passordet mitt",
 	problem: "Hvem er du?",
 	losning: "En navnelapp og en delt hemmelighet",
-	issues: ["Passordet må være langt for å være bra", "Dårlige passord kan hackes relativt enkelt", "Passordgjenbruk - og lekkasjer"],
+	issues: ["Passordet må være langt for å være bra", "Dårlige passord gjettes", "Mindre dårlige passord kan knekkes", "Gjenbruk - og lekkasjer"],
 	funker: "Så lenge du ikke trenger veldig mye sikkerhet",
-	terningkast: 2
+	terningkast: 3
 },
 { 
-	navn: "Fingeravtrykksleser - WTF",
+	navn: "Fingeravtrykksleser",
 	problem: "Hvem er du?",
 	rant: "Jeg gidder ikke huske enda et passord", 
-	losning: "La oss bruke fingeren din, den mister du sikkert ikke!!", 
+	losning: "En bildesensor som tar bilde av fingeren din og lager et sykt langt passord som identifiserer bare deg",
 	issues: ["Det for det meste...", "Må prøve 9 ganger for at det skal gå gjennom", "Folk kutter av fingeren din og slikt"],
 	funker: "Tja",
 	terningkast: 3
@@ -91,17 +91,27 @@ var rants = [
 {
 	navn: "Antivirus",
 	rant: "Datan min er blir så syyyykt treg pga antivirus",
-	problem: "Eneklte dataprogrammer gjør ting du ikke vil de skal gjøre",
-	losning: "Et dataprogram som overvåker alt som skjer på maskina",
-	issues: ["Krever en god del ressurser", "Vanskelig å kjenne igjen virus-aktig aktivitet"],
+	problem: "Enkelte programmer gjør ting du ikke vil de skal gjøre",
+	losning: "Et program som overvåker alt som skjer på maskina",
+	issues: ["Krever en god del ressurser", "Vanskelig å kjenne igjen virus-aktig aktivitet", "Noen av problemene kan løses på andre måter enn antivirus"],
 	alternativer: "",
 	funker: "",
 	terningkast: 3
 },
 {
-	navn: "SSO og lågg deg inn med facebook",
-	rant: "",
-	losning: "",
+	navn: "Brannmur",
+	rant: "Argh, jeg får ikke BitTorrent til å fungere",
+	problem: "Hackere kan ta over maskina di om du har sårbar programvare som er tilknyttet internett",
+	losning: "La en brannmur kontrollere tilgang til nettverket",
+	issues: ["Krever en del admin", "", "Noen av problemene kan løses på andre måter enn antivirus"],
+	alternativer: "",
+	funker: "",
+	terningkast: 3
+},
+{
+	navn: "SSO og logg deg inn med facebook",
+	rant: "Aaaargh, jeg orker ikke lage enda et brukernavn og passord for dette søplenettstedet",
+	losning: "La en tiltrodd 3.part håndterer håndtere lagring ",
 	issues: [""],
 	funker: "",
 	terningkast: 0
@@ -115,12 +125,23 @@ var rants = [
   },
   {
   	navn: "WiFi",
-  	rant: "Det helsikes wifi-passordet er så sykt vanskelig",
-  	losning: "",
-  	issues: [""],
-  	funker: "",
-  	terningkast: 0
+  	rant: "Det WiFi-passordet er så sykt vanskelig",
+  	problem: "Du vil gjerne kunne bruke trådløst nettverk uten at alle kan avlytte det"
+  	losning: "Krypto-magi på all trådløs kommunikasjon med et hemmelig men delt passord",
+  	issues: ["Passordet må være langt for å være bra", "Kan hackes likevel"],
+  	alternativer:
+  	funker: "Ja, men av og til trenger man mer sikkerhet (aka SSL)",
+  	terningkast: 4
   },
+{
+	navn: "SPAM-filter",
+	rant: "Hvorfor kommer ikke den helsikes mailen frem",
+	problem: "Noen på internett vil sende deg reklame som du ikke har bedt om"
+	losning: "",
+	issues: ["Ting som ser ut som SPAM er ikke alltid spam", "Tar ikke bort kjerneproblemet", "Gjør epost sakte men sikkert dårligere"],
+	funker: "Av og til",
+	terningkast: 4
+},
 ];
 
 /*
