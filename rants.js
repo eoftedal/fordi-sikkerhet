@@ -28,7 +28,7 @@ var rants = [
 },
 { 
 	navn: "BankID Java-applet",
-	problem: "Vennligst signer her"
+	problem: "Vennligst signer her",
 	rant: "Føkkings JAVA", 
 	losning: "Vi lager en JAVA-applet som kjører på alle browsere.",
 	issues: ["Java som en browser plugin", "Java som en browser plugin", "Java som en browser plugin", "Java som en browser plugin"],
@@ -91,10 +91,10 @@ var rants = [
 {
 	navn: "Antivirus",
 	rant: "Datan min er blir så syyyykt treg pga antivirus",
-	problem: "Eneklte dataprogrammer gjør ting du ikke vil de skal gjøre"
+	problem: "Eneklte dataprogrammer gjør ting du ikke vil de skal gjøre",
 	losning: "Et dataprogram som overvåker alt som skjer på maskina",
 	issues: ["Krever en god del ressurser", "Vanskelig å kjenne igjen virus-aktig aktivitet"],
-	alternativer:
+	alternativer: "",
 	funker: "",
 	terningkast: 3
 },
@@ -115,7 +115,7 @@ var rants = [
   },
   {
   	navn: "WiFi",
-  	rant: "Det helsikes wifi-passordet er så sykt vanskelig", 
+  	rant: "Det helsikes wifi-passordet er så sykt vanskelig",
   	losning: "",
   	issues: [""],
   	funker: "",
