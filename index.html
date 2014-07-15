@@ -46,18 +46,19 @@
                 <section>
                     <h1>Fordi sikkerhet!!!</h1>
                 </section>
-                <section ng-repeat="r in ct.rants">
+                <section ng-repeat="r in ct.rants track by $index" data-background="{{r.background}}">
                     <section>
                         <h2>{{r.rant}}</h2>
                     </section>
                     <section>
-                        <h2>{{r.navn}}</h2>
-                        <span>{{r.losning}}</span>
+                        <h3>Problem: {{r.problem}}</h3>
+                        <h2 style="padding-top: 50px;" class="fragment" data-fragment-index="1">Løsning: {{r.navn}}</h2>
+                        <span  class="fragment" data-fragment-index="2">{{r.losning}}</span>
                     </section>
                     <section ng-if="r.issues">
-                        <h3>Problemer: </h3>
+                        <h4>Issues: </h4>
                         <ul>
-                            <li ng-repeat="i in r.issues">
+                            <li ng-repeat="i in r.issues track by $index" class="fragment" data-fragment-index="{{$index}}">
                                 {{i}}
                             </li>
                         </ul>
@@ -66,8 +67,11 @@
                         <h3>Funker det?</h3>
                         {{r.funker}}
                     </section>
-                    <section>
-                        <img ng-src="dice-{{r.terningkast}}.png"></h2>
+                    <section ng-if="r.terningkast">
+                        <div ng-if="ct.isArray(r.terningkast)">
+                            <img ng-repeat="terning in r.terningkast" ng-src="dice-{{terning}}.png">
+                        </div>
+                        <img ng-if="r.terningkast > 0 && r.terningkast < 7" ng-src="dice-{{r.terningkast}}.png">
                     </section>
 
                 </section>
@@ -111,7 +115,7 @@
 				]
 			});
 
-            }, 100);
+            }, 1000);
 
 
 		</script>
