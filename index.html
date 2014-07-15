@@ -71,7 +71,7 @@
                         <div ng-if="ct.isArray(r.terningkast)">
                             <img ng-repeat="terning in r.terningkast" ng-src="dice-{{terning}}.png">
                         </div>
-                        <img ng-if="r.terningkast > 0 && r.terningkast < 7" ng-src="dice-{{r.terningkast}}.png">
+                        <img ng-if="r.terningkast > 0 && r.terningkast < 7" ng-src="images/dice-{{r.terningkast}}.png">
                     </section>
 
                 </section>
@@ -82,12 +82,22 @@
 
 		<script src="lib/angular.min.js"></script>
 		<script src="rants.js"></script>
-		<script src="app.js"></script>
+
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
         <script type="text/javascript">
+
+            var app = angular.module('fordiSikkerhet', []);
+
+            app.controller('Ctrl', function(){
+                this.rants = rants;
+                this.isArray = angular.isArray;
+
+            });
+
+
             window.setTimeout(function(){
             // Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
@@ -115,7 +125,7 @@
 				]
 			});
 
-            }, 1000);
+            }, 5);
 
 
 		</script>
